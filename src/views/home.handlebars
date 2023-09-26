@@ -1,0 +1,23 @@
+<h1>ALL PRODUCTUS</h1>
+<a href="/index"><button>HOME</button></a>
+<ul>
+    {{#if allProdMap.length}}
+    {{#each allProdMap}}
+    <li>
+        <p>id:{{this._id}}</p>
+        <p>title:{{this.title}}</p>
+        <p>Description: {{this.description}}</p>
+        <p>Code: {{this.code}}</p>
+        <p>Price: {{this.price}}</p>
+        <p>Stock: {{this.stock}}</p>
+        <p>Category: {{this.category}}</p>
+        <form action="/" method="get">
+        <input type="submit" value="ADD TO CART"></form>
+        
+    
+    </li>
+    {{/each}}
+    {{else}}
+    <h3>No product exists</h3>
+    {{/if}}
+</ul>

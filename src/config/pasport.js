@@ -46,7 +46,7 @@ passport.use(new githubStrategy(
                 const newUser={
                     first_name:profile.displayName? profile.displayName.split(" ")[0]:profile.username,
                     last_name: profile.displayName? profile.displayName.split(" ")[1]: " no lastname",  
-                    username: profile.username, 
+                    username: profile.username ? profile.username : "no user name",
                     email: profile._json.email? profile._json.email: "no mail",
                     password: " ", 
                     githubLog:"true"}
